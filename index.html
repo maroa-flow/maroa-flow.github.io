@@ -173,7 +173,28 @@
       border-color: rgba(23,23,23,.22);
       background: rgba(255,255,255,.55);
     }
+/* DM TO BOOK button */
+.btnDM {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #f4a261; /* peach */
+  color: #1f1f1f;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  text-decoration: none; /* IMPORTANT */
+  transition: transform 0.18s ease, background 0.18s ease;
+}
 
+.btnDM:hover {
+  transform: translateY(-1px);
+  background: #e76f51;
+}
     /* =========================
        4) SECTIONS (PAGES)
        ========================= */
@@ -520,24 +541,6 @@
         <div class="content reveal">
           <h1 class="heroTitle">Build strength.<br/>Take space.</h1>
 
-          <p class="subhead">
-            maroa flow
-          </p>
-
-          <div class="btnRow">
-            <!-- Rule 2: About us button leads to page 2 -->
-            #aboutAbout us</a>
-
-            <!-- Rule 3: First Flow button leads to page 4 -->
-            #firstflowFirst Flow</a>
-
-            <!-- Rule 4: Schedule button leads to page 6 -->
-            #scheduleSchedule</a>
-
-            <!-- Rule 5: Rates button leads to page 7 -->
-            #ratesRates</a>
-          </div>
-
           <div class="footer">© Maroa Flow</div>
         </div>
       </div>
@@ -578,10 +581,12 @@
           <h2 class="h2">Meet you here.</h2>
 
           <p class="body">
-            <span class="accent">@maroa.flow</span><br/>
-            Maroa Flow<br/>
+           
             <strong>Harana Surf Resort</strong><br/>
             Tuason Point, Brgy. Catangnan, General Luna, Surigao del Norte, Siargao, Philippines
+            <br/>
+            <span class="accent">Instagram, Tiktok: @maroa.flow</span><br/>
+            Facebook: Maroa Flow<br/>
           </p>
 
           <div class="btnRow">
@@ -593,12 +598,7 @@
   >
     DM TO BOOK
   </a>
-</div>
 
-            https://www.instagram.com/maroa.flow/
-              View Instagram
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -634,9 +634,6 @@
   </a>
 </div>
 
-
-            <!-- Rule 3: First Flow flow continues to page 5 (Guide) -->
-            #guideA guide to your first ride</a>
           </div>
         </div>
       </div>
