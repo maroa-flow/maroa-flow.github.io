@@ -113,7 +113,11 @@
       display:flex;
       justify-content:center;
     }
-
+.navLogo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
     .navInner{
       pointer-events: auto;
       width: min(var(--max), calc(100% - 40px));
@@ -481,10 +485,12 @@
   <div class="topNav">
     <div class="navInner">
       <div class="brandMark">
-        <!-- Optional logo: /images/logo.svg -->
-        <!-- <img src="images/logo.svg" alt="Maroa Flow"/> -->
-        <span>MAROA FLOW</span>
-      </div>
+  <img
+    src="images/logo.svg"
+    alt="Maroa Flow"
+    class="navLogo"
+  />
+</div>
 
       <div class="navLinks">
         #homeHome</a>
