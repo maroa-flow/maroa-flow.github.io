@@ -28,13 +28,6 @@
     /* =========================
        1) FONTS (LOCAL)
        ========================= */
-    @font-face{
-      font-family: "Explode";
-      src: url("fonts/Explode-Regular.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
 
     @font-face{
       font-family: "Cerebri";
@@ -199,13 +192,13 @@
        4) SECTIONS (PAGES)
        ========================= */
     .page{
-      min-height: 100vh;
+      min-height: 120vh;
       scroll-snap-align: start;
       position: relative;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding: 110px 12px 60px;
+      padding: 160px 20px 120px;
       background: #F4A261; /* Maroa Flow orange */
     }
 
@@ -217,6 +210,7 @@
       background: rgba(255,255,255,.25);
       box-shadow: var(--shadow);
       position: relative;
+      margin-bottom: 0;
     }
 
     .content{
@@ -263,15 +257,17 @@
     /* =========================
        5) TYPOGRAPHY (Mockup feel)
        ========================= */
-    .heroTitle{
-      font-family: "Explode", "Cerebri", system-ui, sans-serif;
-      font-weight: 400;
-      font-size: clamp(44px, 6vw, 76px);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-      margin: 0 0 18px;
-      color: var(--text);
+    
+.heroTitle {
+    font-weight: 700;
     }
+    
+.h2 {
+  font-family: "Cerebri", system-ui, -apple-system, sans-serif;
+  font-weight: 700;        /* ✅ Bold */
+  letter-spacing: -0.02em;
+}
+
 
     .subhead{
       font-family: "Cerebri", system-ui, sans-serif;
@@ -539,7 +535,7 @@
 </video>
 
 
-        <div class="bgTint"></div>
+
 
         <div class="content reveal">
           <h1 class="heroTitle">Build strength.<br/>Take space.</h1>
@@ -553,7 +549,7 @@
     <section class="page" id="about" aria-label="About us page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/home-2.jpg');"></div>
-        <div class="bgTint"></div>
+        
 
         <div class="content reveal">
           <h2 class="h2">
@@ -576,7 +572,7 @@
     <section class="page" id="meet" aria-label="Meet you here page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/home-3.jpg');"></div>
-        <div class="bgTint"></div>
+        
 
         <div class="content reveal">
           <h2 class="h2">Meet you here.</h2>
@@ -597,7 +593,7 @@
     <section class="page" id="firstflow" aria-label="First Flow page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/firstflow-bg.jpg');"></div>
-        <div class="bgTint"></div>
+        
 
         <div class="content reveal">
           <h2 class="h2">
@@ -632,7 +628,7 @@
     <section class="page" id="guide" aria-label="Guide page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/guide-bg.jpg');"></div>
-        <div class="bgTint"></div>
+        
 
         <div class="content reveal">
           <h2 class="h2">A GUIDE TO YOUR<br/>FIRST RIDE</h2>
@@ -655,7 +651,7 @@
     <section class="page" id="schedule" aria-label="Schedule page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/schedule-bg.jpg');"></div>
-        <div class="bgTint"></div>
+       
 
         <div class="content reveal">
           <h2 class="h2">Sunrise. Sunset.</h2>
@@ -717,7 +713,7 @@
     <section class="page" id="rates" aria-label="Rates page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/rates-bg.jpg');"></div>
-        <div class="bgTint"></div>
+        
 
         <div class="content reveal">
           <h2 class="h2">Class Packs</h2>
