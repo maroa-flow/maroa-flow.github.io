@@ -56,7 +56,7 @@
     
 
 #home {
-  color: #FFC07A;  /* brighter Maroa Flow orange */
+  color: #2388c8;  /* Maroa Flow blue */
 }
 
 #about,
@@ -302,12 +302,14 @@
     
 .heroTitle {
   font-size: clamp(48px, 6vw, 84px);
+   letter-spacing: -0.015em;
+  line-height: 0.48
 }
 .h2 {
   font-family: "Cerebri", system-ui, -apple-system, sans-serif;
   font-weight: 600;          /* ✅ key change */
   letter-spacing: -0.015em;
-  line-height: 0.88;
+  line-height: 0.48;
 }
 
 
@@ -611,28 +613,41 @@
     </section>
 
     <!-- PAGE 3 (Meet you here.) -->
-    <section class="page" id="meet" aria-label="Meet you here page">
-      <div class="pageInner">
-        <div class="bgImage" style="background-image:url('images/home-3.jpg');"></div>
-        
+    
+<section class="page" id="meet" aria-label="Meet you here page">
 
-        <div class="content reveal">
-          <h2 class="h2">Meet you here.</h2>
+  <!-- ✅ BACKGROUND IMAGE GOES HERE (FIRST CHILD) -->
+  <div
+    class="bgImage"
+    style="background-image:url('images/home-3.jpg');">
+  </div>
 
-          <p class="body">
-           
-            <strong>Harana Surf Resort</strong><br/>
-            Tuason Point, Brgy. Catangnan, General Luna, Surigao del Norte, Siargao, Philippines
-            <br/>
-            <span class="accent">Instagram/Tiktok: @maroa.flow</span><br/>
-            <span class="accent">Facebook: Maroa Flow</span><br/>
-          </p>
+  <!-- ✅ CONTENT WRAPPER COMES AFTER -->
+  <div class="pageInner">
+    <div class="content reveal">
+      <h2 class="h2">Meet you here.</h2>
 
-      </div>
-    </section>
+      <p class="body">
+        <strong>Harana Surf Resort</strong><br/>
+        Tuason Point, Brgy. Catangnan, General Luna, Surigao del Norte, Siargao, Philippines
+        <br/>
+        <span class="accent">Instagram/Tiktok: @maroa.flow</span><br/>
+        <span class="accent">Facebook: Maroa Flow</span><br/>
+      </p>
+    </div>
+  </div>
+
+</section>
+
 
     <!-- PAGE 4 (First Flow starts here...) -->
     <section class="page" id="firstflow" aria-label="First Flow page">
+
+      <div
+    class="bgImage"
+    style="background-image:url('images/firstflow-bg.jpg');">
+  </div>
+      
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/firstflow-bg.jpg');"></div>
         
@@ -668,6 +683,13 @@
 
     <!-- PAGE 5 (Guide to first ride) -->
     <section class="page" id="guide" aria-label="Guide page">
+
+      
+<div
+    class="bgImage"
+    style="background-image: url('images/guide-bg.jpg');">
+  </div>
+
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/guide-bg.jpg');"></div>
         
