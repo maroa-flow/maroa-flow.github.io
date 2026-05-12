@@ -53,6 +53,31 @@
       font-display: swap;
     }
 
+    
+#home,
+#about,
+#meet,
+#firstflow,
+#guide {
+  color: #FFD2A6; /* Maroa Flow light melon orange */
+}
+
+    
+#home h1,
+#home h2,
+#about h2,
+#meet h2,
+#firstflow h2,
+#guide h2,
+#home p,
+#about p,
+#meet p,
+#firstflow p,
+#guide p {
+  color: #FFD2A6;
+}
+
+
     /* =========================
        2) BASE / BRAND TOKENS
        ========================= */
@@ -191,27 +216,34 @@
     /* =========================
        4) SECTIONS (PAGES)
        ========================= */
-    .page{
-      min-height: 120vh;
-      scroll-snap-align: start;
-      position: relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding: 160px 20px 120px;
-      background: #F4A261; /* Maroa Flow orange */
-    }
+    
+.page {
+  min-height: 100vh;            /* ✅ exactly one screen */
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
 
-    .pageInner{
-      width: min(var(--max), calc(100% - 0px));
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.25);
-      box-shadow: var(--shadow);
-      position: relative;
-      margin-bottom: 0;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 24px 80px;     /* ✅ balanced, not massive */
+  background: #F4A261;
+}
+
+
+    
+.pageInner {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  position: relative;
+}
+
 
     .content{
       padding: 44px 44px;
@@ -259,13 +291,13 @@
        ========================= */
     
 .heroTitle {
-    font-weight: 700;
-    }
-    
+  font-size: clamp(48px, 6vw, 84px);
+}
 .h2 {
   font-family: "Cerebri", system-ui, -apple-system, sans-serif;
-  font-weight: 700;        /* ✅ Bold */
-  letter-spacing: -0.02em;
+  font-weight: 600;          /* ✅ key change */
+  letter-spacing: -0.015em;
+  line-height: 1.06;
 }
 
 
