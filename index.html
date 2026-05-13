@@ -89,7 +89,7 @@
 
 
 #home .heroTitle{
-  color: var(--logoOrangeDark); /* #E76F51 */
+  color: var(--melon); /* #FFD2A6 */ 
   text-shadow: 0 10px 26px rgba(0,0,0,.18); /* lighter than “photo text” shadow */
 }
   
@@ -102,12 +102,7 @@
 #about .h2,
 #about .body {
   color: #FFD2A6;
-}
-
-    
-#about .h2,
-#about .body {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
 
@@ -152,11 +147,15 @@
 #firstflow .content .h2 {
   color: #FFD2A6;
   text-shadow: 0 3px 12px rgba(0,0,0,.45);
+   text-align: left;         /* keep text clean */
+  max-width: 520px; 
+    margin-right: 64px;/* prevents edge hugging */
 }
-
 
     
 #firstflow .pageInner {
+  display: flex;
+  justify-content: flex-end;
   background: rgba(0,0,0,.55);
   color: #FFD2A6;
 }
@@ -167,6 +166,14 @@
   color: #1A1A1A;            /* readable dark */
   min-height: auto;
   padding: 48px 56px;
+  height: auto; /* critical */
+}
+
+    
+#guide {
+  height: auto;
+  min-height: auto;
+  padding-bottom: 64px; /* tighter ending */
 }
 
 
@@ -190,7 +197,7 @@
 
       --shadow: 0 14px 50px rgba(0,0,0,.10);
       
--melon: #FFD2A6;
+--melon: #FFD2A6;
   --logoOrangeDark: #E76F51; /* darker orange similar to your logo + existing hover */
   --shadowOnPhoto: 0 2px 10px rgba(0,0,0,.38);
 
@@ -242,8 +249,8 @@
       justify-content:space-between;
       padding: 12px 14px;
       border: 1px solid var(--border);
-      background: rgba(251,246,230,.72);
-      backdrop-filter: blur(10px);
+background: rgba(251,246,230,0.45); /* more transparent */
+  backdrop-filter: blur(10px) saturate(1.1);
       border-radius: 999px;
       box-shadow: 0 10px 30px rgba(0,0,0,.06);
     }
@@ -328,6 +335,7 @@
 
   padding: 120px 24px 80px;     /* ✅ balanced, not massive */
   background: #F4A261;
+  justify-content: center;
 }
 
 
@@ -341,6 +349,7 @@
   overflow: hidden;
 
   position: relative;
+  margin: 0 auto;
 }
     
 
