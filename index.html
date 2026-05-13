@@ -65,31 +65,22 @@
 }
 
 
-#about,
-#meet,
-#firstflow,
-#guide {
-  color: #FFD2A6; /* Maroa Flow light melon orange */
-}
-
-    
-#home h1,
-#home h2,
-#about h2,
-#meet h2,
-#firstflow h2,
-#guide h2,
-#home p,
-#about p,
-#meet p,
-#firstflow p,
-#guide p {
-  color: #FFD2A6;
-}
 
   
 #about .content {
   margin-top: 160px;   /* ⬅️ pushes text down */
+}
+
+    
+#firstflow .pageInner {
+  background: rgba(0,0,0,.55);
+  color: #FFD2A6;
+}
+
+    
+#guide .pageInner {
+  background: #FBF6E6;      /* sand / cream */
+  color: #1A1A1A;            /* readable dark */
 }
 
 
@@ -148,7 +139,7 @@
       justify-content:center;
     }
 .navLogo {
-  height: 338px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -176,11 +167,7 @@
       font-size: 14px;
       white-space: nowrap;
     }
-    .brandMark img{
-      height: 22px;
-      width: auto;
-      display:block;
-    }
+   
 
     .navLinks{
       display:flex;
@@ -198,7 +185,7 @@
       border: 1px solid var(--border);
       background: rgba(255,255,255,.35);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 400;
       color: rgba(23,23,23,.85);
       transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
@@ -674,7 +661,7 @@
          <div class="btnRow">
   <a
     class="btnDM"
-    href="https://www.instagram.com/direct/new/?username=maroa.flow"
+    href="https://www.instagram.com/maroa.flow/"
     target="_blank"
     rel="noopener"
   >
@@ -688,34 +675,28 @@
     </section>
 
     <!-- PAGE 5 (Guide to first ride) -->
-    <section class="page" id="guide" aria-label="Guide page">
+    <section class="page page--withBg" id="guide" aria-label="Guide page">
 
-      
-<div
-    class="bgImage"
-    style="background-image: url('images/guide-bg.jpg');">
+  <div class="bgImage" style="background-image: url('images/guide-bg.jpg');"></div>
+
+  <div class="pageInner">
+    <div class="content reveal">
+      <h2 class="h2">
+        A guide to your first ride
+      </h2>
+
+      <ul class="guideList">
+        <li>Get ready to sweat. Bring your water and towels.</li>
+        <li>Arrive 15 minutes early. We’ll get your bikes set up properly for your safety.</li>
+        <li>Wear light, breathable clothes and closed-toe athletic shoes for the ride.</li>
+        <li>Switch on and put on your headphones. Set your preferred volume.</li>
+        <li>Follow the music, but listen to your body. Go at your own pace, especially if it’s your first time riding.</li>
+        <li>Enjoy the ride.</li>
+      </ul>
+    </div>
   </div>
 
-      <div class="pageInner">
-        <div class="bgImage" style="background-image:url('images/guide-bg.jpg');"></div>
-        
-
-        <div class="content reveal">
-          <h2 class="h2">A GUIDE TO YOUR<br/>FIRST RIDE</h2>
-
-          <ul class="guideList">
-            <li>Get ready to sweat. Bring your water and towels.</li>
-            <li>Arrive 15 minutes early. We’ll get your bikes set up properly for your safety.</li>
-            <li>Wear light, breathable clothes and closed-toe athletic shoes for the ride.</li>
-            <li>Switch on and put on your headphones. Set your preferred volume.</li>
-            <li>Follow the music, but listen to your body. Go at your own pace, especially if it’s your first time riding.</li>
-            <li>Enjoy the ride.</li>
-          </ul>
-
-
-        </div>
-      </div>
-    </section>
+</section>
 
     <!-- PAGE 6 (Schedule: sunrise. sunset.) -->
     <section class="page" id="schedule" aria-label="Schedule page">
@@ -742,7 +723,7 @@
             <div class="btnRow">
   <a
     class="btnDM"
-    href="https://www.instagram.com/direct/new/?username=maroa.flow"
+    href="https://www.instagram.com/maroa.flow/"
     target="_blank"
     rel="noopener"
   >
@@ -761,7 +742,7 @@
               <div class="btnRow">
   <a
     class="btnDM"
-    href="https://www.instagram.com/direct/new/?username=maroa.flow"
+    href="https://www.instagram.com/maroa.flow/"
     target="_blank"
     rel="noopener"
   >
@@ -842,7 +823,7 @@
          <div class="btnRow">
   <a
     class="btnDM"
-    href="https://www.instagram.com/direct/new/?username=maroa.flow"
+    href="https://www.instagram.com/maroa.flow/"
     target="_blank"
     rel="noopener"
   >
