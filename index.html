@@ -63,26 +63,25 @@
   z-index: 0;
 }
 
-    
-#home .pageInner {
-  position: relative;
-  z-index: 2;
+
+/* Center hero content vertically */
+#home .pageInner{
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: flex-start;
+}
+
+/* Keep left alignment, just control spacing */
+#home .content{
+  margin-top: 0;
+  padding: 0 44px;
 }
 
 
-#home {
-  color: #2388c8;  /* Maroa Flow blue */
+#home .heroTitle{
+  color: var(--logoOrangeDark); /* #E76F51 */
+  text-shadow: 0 10px 26px rgba(0,0,0,.18); /* lighter than “photo text” shadow */
 }
-
-    
-#home .heroTitle {
-  color: #2388c8;
-}
-
-
-
-}
-
   
 #about .content {
   margin-top: 160px;   /* ⬅️ pushes text down */
@@ -114,9 +113,17 @@
   align-items: flex-start;
 }
 
-#meet .content {
-  padding-top: 64px;
-  padding-bottom: 64px;
+    
+/* Make MEET content positioning predictable */
+#meet .pageInner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Lower the text block (works reliably) */
+#meet .content{
+  margin-top: clamp(120px, 18vh, 200px);
 }
 
     
@@ -646,6 +653,8 @@
 
         <div class="content reveal">
           <h2 class="h2">
+            <br></br>
+            <br></br>
             Movement belongs in everyday life.<br/>
             It can feel immaculate, every time.
           </h2>
