@@ -883,21 +883,6 @@ background: rgba(251,246,230,0.45); /* more transparent */
 }
 
     
-/* --- ORANGE TEXTURE BACKGROUNDS (Schedule & Rates) --- */
-
-#schedule::before,
-#rates::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/images/peach-texture.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.30;                 
-  pointer-events: none;
-  z-index: 0;
-}
 
 /* ensure content stays above texture */
 #schedule .pageInner,
@@ -906,27 +891,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
   z-index: 2;
 }
 
-    
-/* =========================
-   REAL TEXTURE (NO IMAGE FILE)
-   ========================= */
-
-.page {
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255,255,255,0.03),
-      rgba(255,255,255,0.03) 2px,
-      rgba(0,0,0,0.02) 2px,
-      rgba(0,0,0,0.02) 4px
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.18),
-      rgba(0,0,0,0.06)
-    ),
-    var(--peach);
-}
+  
     
   </style>
 </head>
