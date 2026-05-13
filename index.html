@@ -320,6 +320,7 @@
     .navInner{
       pointer-events: auto;
       width: min(var(--max), calc(100% - 40px));
+        max-width: 100%;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -390,6 +391,35 @@ background: rgba(251,246,230,0.45); /* more transparent */
   transform: translateY(-1px);
   background: #e76f51;
 }
+
+
+/* =========================
+   RESPONSIVE NAV (No burgering)
+   ========================= */
+
+/* Narrow desktop / tablet */
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;          /* hide buttons entirely */
+  }
+
+  .navInner {
+    justify-content: center; /* logo centered */
+  }
+}
+
+/* Mobile refinement */
+@media (max-width: 768px) {
+  .navInner {
+    padding: 10px 16px;
+  }
+
+  .navLogo {
+    height: 44px;
+  }
+}
+
+    
     /* =========================
        4) SECTIONS (PAGES)
        ========================= */
