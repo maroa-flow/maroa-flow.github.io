@@ -138,11 +138,10 @@
 
 /* Apply Movement styling to Meet + First Flow */
     
-#meet .content,
 #firstflow .content {
   color: #FFD2A6; /* same light melon as Movement */
  text-align: right;         /* ✅ text aligns right */
-  max-width: 520px;
+  max-width: 600px;
   margin-right: 64px;
 
 }
@@ -228,11 +227,14 @@
 }
 
 
+#rates .rateCard {
+  text-align: center;
+}  
+
 #rates .btnDM {
   background: #E76F51;        /* deeper orange */
   color: #1F1F1F;
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 #rates .btnDM:hover {
@@ -440,6 +442,16 @@ background: rgba(251,246,230,0.45); /* more transparent */
   z-index: 2;
 }
 
+    
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/noise.png");
+  opacity: 0.05;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
 
     .content{
       padding: 44px 44px;
@@ -905,7 +917,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
 
           <div class="scheduleGrid">
             <div class="panel">
-              <div class="panelTitle">Sunrise</div>
+              <div class="panelTitle">Morning Classes</div>
               <div class="times">
                 <span class="timePill">5:30 am</span>
                 <span class="timePill">6:45 am</span>
@@ -925,7 +937,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
             </div>
 
             <div class="panel">
-              <div class="panelTitle">Sunset</div>
+              <div class="panelTitle">Afternoon Classes</div>
               <div class="times">
                 <span class="timePill">4:00 pm</span>
                 <span class="timePill">5:15 pm</span>
