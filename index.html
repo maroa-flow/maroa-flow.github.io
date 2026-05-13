@@ -409,6 +409,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
 }
 
 /* Mobile refinement */
+
 @media (max-width: 768px) {
   .navInner {
     padding: 10px 16px;
@@ -416,6 +417,13 @@ background: rgba(251,246,230,0.45); /* more transparent */
 
   .navLogo {
     height: 44px;
+  }
+
+  /* --- MOBILE: disable full-screen snap --- */
+  .page {
+    height: auto;
+    min-height: auto;
+    scroll-snap-align: none;
   }
 }
 
@@ -545,13 +553,14 @@ background: rgba(251,246,230,0.45); /* more transparent */
    letter-spacing: -0.015em;
   line-height: 0.78
 }
+
 .h2 {
   font-family: "Cerebri", system-ui, -apple-system, sans-serif;
-  font-weight: 600;          /* ✅ key change */
-  letter-spacing: -0.015em;
-  line-height: 0.48;
+  font-weight: 700;            /* ✅ true bold for all section headers */
+  letter-spacing: -0.02em;     /* slightly tighter for bold */
+  line-height: 1.05;           /* readable multi-line headers */
+  margin: 0 0 16px;
 }
-
 
     .subhead{
       font-family: "Cerebri", system-ui, sans-serif;
@@ -870,6 +879,43 @@ background: rgba(251,246,230,0.45); /* more transparent */
   min-height: auto;
 }
 
+    
+/* --- RATES: prevent cropping --- */
+#rates {
+  height: auto;
+  min-height: auto;
+  padding-bottom: 96px;
+}
+
+#rates .pageInner {
+  overflow: visible;
+}
+
+    
+/* --- ORANGE TEXTURE BACKGROUNDS (Schedule & Rates) --- */
+
+#schedule::before,
+#rates::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/peach-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.30;                 
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ensure content stays above texture */
+#schedule .pageInner,
+#rates .pageInner {
+  position: relative;
+  z-index: 2;
+}
+
+    
 /* =========================
    REAL TEXTURE (NO IMAGE FILE)
    ========================= */
