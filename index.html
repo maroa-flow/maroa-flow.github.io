@@ -93,10 +93,7 @@
   text-shadow: 0 10px 26px rgba(0,0,0,.18); /* lighter than “photo text” shadow */
 }
   
-#about .content {
-  margin-top: 160px;   /* ⬅️ pushes text down */
-  
-}
+
 
     
 #about .h2,
@@ -127,14 +124,7 @@
 }
 
 /* Lower the text block (works reliably) */
-#meet .content{
-  margin-top: clamp(120px, 18vh, 200px);
-  
-  text-align: left;            /* force text left */
-  margin-left: 64px;           /* breathing room from edge */
-  max-width: 520px;
 
-}
 
 /* Apply Movement styling to Meet + First Flow */
     
@@ -759,6 +749,118 @@ background: rgba(251,246,230,0.45); /* more transparent */
       font-size: 12px;
       color: rgba(23,23,23,.58);
     }
+
+/* =========================
+   FINAL SECTION FIXES
+   ========================= */
+
+/* --- UNIVERSAL: proper vertical centering for text-on-image pages --- */
+#about .pageInner,
+#meet .pageInner,
+#firstflow .pageInner,
+#schedule .pageInner {
+  display: flex;
+  align-items: center;
+}
+
+/* --- ABOUT --- */
+#about .content {
+  margin-top: 0;
+  max-width: 560px;
+}
+
+#about .h2,
+#about .body {
+  color: var(--melon);
+  text-shadow: var(--shadowOnPhoto);
+}
+
+/* --- MEET YOU HERE (FIX BLACK TEXT + LEFT ALIGN) --- */
+#meet .content {
+  text-align: left;
+  max-width: 520px;
+  margin-left: 64px;
+}
+
+#meet .h2,
+#meet .body {
+  color: var(--melon);
+  text-shadow: var(--shadowOnPhoto);
+}
+
+/* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
+#firstflow .pageInner {
+  justify-content: flex-end;
+}
+
+#firstflow .content {
+  text-align: right;
+  max-width: 620px; /* wider for right-aligned text */
+  margin-right: 64px;
+}
+
+#firstflow .h2 {
+  line-height: 1.1;
+}
+
+#firstflow .body {
+  line-height: 1.6;
+  color: var(--melon);
+  text-shadow: var(--shadowOnPhoto);
+}
+
+#firstflow .btnRow {
+  justify-content: flex-end;
+}
+
+/* --- SCHEDULE (CENTER + MATCH COLOR) --- */
+#schedule .content {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#schedule .h2,
+#schedule .body {
+  color: var(--melon);
+  text-shadow: var(--shadowOnPhoto);
+}
+
+#schedule .times,
+#schedule .btnRow {
+  justify-content: center;
+}
+
+/* --- REMOVE FULL HEIGHT FOR NON-HERO SECTIONS --- */
+#about,
+#meet,
+#firstflow,
+#schedule {
+  height: auto;
+  min-height: auto;
+}
+
+/* =========================
+   REAL TEXTURE (NO IMAGE FILE)
+   ========================= */
+
+.page {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 2px,
+      rgba(0,0,0,0.02) 2px,
+      rgba(0,0,0,0.02) 4px
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.18),
+      rgba(0,0,0,0.06)
+    ),
+    var(--peach);
+}
+    
   </style>
 </head>
 
