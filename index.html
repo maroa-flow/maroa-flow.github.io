@@ -317,20 +317,26 @@
   width: auto;
   display: block;
 }
-    .navInner{
-      pointer-events: auto;
-      width: min(var(--max), calc(100% - 40px));
-        max-width: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-background: rgba(251,246,230,0.45); /* more transparent */
-  backdrop-filter: blur(10px) saturate(1.1);
-      border-radius: 999px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
+   
+.navInner{
+  pointer-events: auto;
+  width: min(var(--max), calc(100% - 40px));
+  max-width: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+
+  background: rgba(160, 150, 135, 0.55);
+
+  backdrop-filter: blur(12px) saturate(1.05);
+  border-radius: 999px;
+  
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
 
     .brandMark{
       display:flex;
@@ -428,6 +434,30 @@ background: rgba(251,246,230,0.45); /* more transparent */
 }
 
     
+/* --- ORANGE TEXTURE BACKGROUNDS (Schedule & Rates) --- */
+
+#schedule::before,
+#rates::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/peach-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.30;
+  pointer-events: none;
+  z-index: 0;
+}
+
+    
+/* Make image-based sections feel tall again */
+#about .pageInner,
+#firstflow .pageInner,
+#schedule .pageInner {
+  min-height: 72vh; /* ✅ restores visual height for images */
+}
+    
     /* =========================
        4) SECTIONS (PAGES)
        ========================= */
@@ -439,7 +469,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
 
     
 .page {
-  min-height: 100vh;            /* ✅ exactly one screen */
+  min-height: 100vh;          
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
@@ -447,7 +477,7 @@ background: rgba(251,246,230,0.45); /* more transparent */
   display: flex;
 
 
-  padding: 120px 24px 80px;     /* ✅ balanced, not massive */
+  padding: 100px 24px;    
   background: #F4A261;
   justify-content: center;
 }
