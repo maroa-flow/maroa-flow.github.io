@@ -129,21 +129,30 @@
 /* Lower the text block (works reliably) */
 #meet .content{
   margin-top: clamp(120px, 18vh, 200px);
+  
+  text-align: left;            /* force text left */
+  margin-left: 64px;           /* breathing room from edge */
+  max-width: 520px;
+
 }
 
- 
 /* Apply Movement styling to Meet + First Flow */
+    
 #meet .content,
 #firstflow .content {
   color: #FFD2A6; /* same light melon as Movement */
+ text-align: right;         /* ✅ text aligns right */
+  max-width: 520px;
+  margin-right: 64px;
+
 }
 
 #meet .content .body,
 #firstflow .content .body {
   color: #FFD2A6;
+  
 }
 
-#meet .content .h2,
 #firstflow .content .h2 {
   color: #FFD2A6;
   text-shadow: 0 3px 12px rgba(0,0,0,.45);
@@ -180,6 +189,20 @@
   padding-bottom: 64px; /* tighter ending */
 }
 
+
+#schedule .h2,
+#schedule .body {
+  color: #FFD2A6;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+}
+    
+#schedule .times {
+  justify-content: center;
+}
+    
+#schedule .btnRow {
+  justify-content: center;
+}
     
 #schedule {
   height: auto;
@@ -202,6 +225,31 @@
 
 #schedule .scheduleGrid {
   justify-content: center;
+}
+
+
+#rates .btnDM {
+  background: #E76F51;        /* deeper orange */
+  color: #1F1F1F;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+#rates .btnDM:hover {
+  background: #D65A3A;
+}
+    
+#about
+#firstflow    
+#schedule,
+#rates {
+  background:
+    radial-gradient(
+      1200px 600px at 30% -20%,
+      rgba(255,255,255,0.25),
+      transparent 60%
+    ),
+    var(--peach);
 }
 
     /* =========================
