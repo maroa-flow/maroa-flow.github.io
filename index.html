@@ -584,13 +584,16 @@
   line-height: 0.78
 }
 
+
 .h2 {
   font-family: "Cerebri", system-ui, -apple-system, sans-serif;
-  font-weight: 700;            /* ✅ true bold for all section headers */
-  letter-spacing: -0.02em;     /* slightly tighter for bold */
-  line-height: 1.05;           /* readable multi-line headers */
+  font-weight: 700;
+  font-size: clamp(34px, 4.8vw, 56px);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
   margin: 0 0 16px;
 }
+
 
     .subhead{
       font-family: "Cerebri", system-ui, sans-serif;
@@ -915,6 +918,8 @@
     
 
 /* ensure content stays above texture */
+    #about .pageInner,
+    #firstflow .pageInner
 #schedule .pageInner,
 #rates .pageInner {
   position: relative;
@@ -1011,7 +1016,7 @@
   <!-- ✅ CONTENT WRAPPER COMES AFTER -->
   <div class="pageInner">
     <div class="content reveal">
-      <h2 class="h2">Meet you here.</h2>
+      <h2 class="h2">Saved you a seat.</h2>
 
       <p class="body">
         <strong>Harana Surf Resort</strong><br/>
