@@ -280,7 +280,13 @@
     }
 
     *{ box-sizing:border-box; }
-    html, body{ height:100%; }
+    
+    html, body{ height:100%; 
+            
+margin: 0;
+  overflow-x: hidden;
+
+              }
     body{
       margin:0;
       background: var(--cream);
@@ -426,12 +432,6 @@
     height: 44px;
   }
 
-  /* --- MOBILE: disable full-screen snap --- */
-  .page {
-    height: auto;
-    min-height: auto;
-    scroll-snap-align: none;
-  }
 }
 
     
@@ -468,21 +468,30 @@
   justify-content: flex-start; /* not centered */
 }
 
-    
 .page {
-  min-height: 100vh;          
-  height: 100vh;
-  scroll-snap-align: start;
   position: relative;
 
+  /* height behavior */
+  min-height: 100svh;   /* mobile-safe */
+  height: auto;
+
+  /* layout */
   display: flex;
-
-
-  padding: 100px 24px;    
-  background: #F4A261;
   justify-content: center;
-}
+  padding: 100px 24px;
 
+  /* scroll behavior */
+  scroll-snap-align: start;
+
+  /* background */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.18),
+      rgba(0,0,0,0.06)
+    ),
+    var(--peach);
+}
 
     
 .pageInner {
@@ -522,16 +531,6 @@
   mix-blend-mode: overlay;
 }
     
-.page {
-  position: relative;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.18),
-      rgba(0,0,0,0.06)
-    ),
-    var(--peach);
-}
 
 
     .content{
@@ -553,7 +552,7 @@
       background-size: cover;
       background-position: center;
       filter: saturate(1.02);
-      transform: scale(1.01);
+      
     }
 
     .bgTint{
@@ -573,7 +572,7 @@
       width:100%;
       height:100%;
       object-fit: cover;
-      transform: scale(1.01);
+    
     }
 
     /* =========================
@@ -887,16 +886,6 @@
 #schedule .btnRow {
   justify-content: center;
 }
-
-/* --- REMOVE FULL HEIGHT FOR NON-HERO SECTIONS --- */
-#about,
-#meet,
-#firstflow,
-#schedule {
-  height: auto;
-  min-height: auto;
-}
-
     
 /* --- RATES: prevent cropping --- */
 #rates {
@@ -1051,14 +1040,14 @@
           </p>
 
          <div class="btnRow">
-  <a
-    class="btnDM"
-    href="https://www.instagram.com/maroa.flow/"
-    target="_blank"
-    rel="noopener"
-  >
-    DM TO BOOK
-  </a>
+ 
+<a
+  class="btnDM ig-link"
+  href="https://www.instagram.com/maroa.flow/"
+>
+  DM TO BOOK
+</a>
+
 </div>
 
           </div>
@@ -1113,14 +1102,14 @@
                 <span class="timePill">8:00 am</span>
               </div>
             <div class="btnRow">
-  <a
-    class="btnDM"
-    href="https://www.instagram.com/maroa.flow/"
-    target="_blank"
-    rel="noopener"
-  >
-    DM TO BOOK
-  </a>
+ 
+<a
+  class="btnDM ig-link"
+  href="https://www.instagram.com/maroa.flow/"
+>
+  DM TO BOOK
+</a>
+
 </div>
 
             </div>
@@ -1132,14 +1121,14 @@
                 <span class="timePill">5:15 pm</span>
               </div>
               <div class="btnRow">
-  <a
-    class="btnDM"
-    href="https://www.instagram.com/maroa.flow/"
-    target="_blank"
-    rel="noopener"
-  >
-    DM TO BOOK
-  </a>
+  
+<a
+  class="btnDM ig-link"
+  href="https://www.instagram.com/maroa.flow/"
+>
+  DM TO BOOK
+</a>
+
 </div>
 
             </div>
@@ -1213,14 +1202,14 @@
           </div>
 
          <div class="btnRow">
-  <a
-    class="btnDM"
-    href="https://www.instagram.com/maroa.flow/"
-    target="_blank"
-    rel="noopener"
-  >
-    DM TO BOOK
-  </a>
+ 
+<a
+  class="btnDM ig-link"
+  href="https://www.instagram.com/maroa.flow/"
+>
+  DM TO BOOK
+</a>
+
 </div>
 
         </div>
@@ -1243,5 +1232,33 @@
     /* Smooth anchor scroll */
     document.documentElement.style.scrollBehavior = "smooth";
   </script>
+  
+<script>
+  document.querySelectorAll(".ig-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+      // iOS → try app, fallback to web
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        e.preventDefault();
+        window.location = "instagram://user?username=maroa.flow";
+        setTimeout(() => {
+          window.location = this.href;
+        }, 800);
+      }
+
+      // Android → intent opens Instagram app
+      else if (/Android/i.test(ua)) {
+        e.preventDefault();
+        window.location =
+          "intent://instagram.com/_u/maroa.flow#" +
+          "Intent;scheme=https;package=com.instagram.android;end";
+      }
+
+      // Desktop → normal href behavior
+    });
+  });
+</script>
+  
 </body>
 </html>
