@@ -128,49 +128,10 @@
 
 /* Apply Movement styling to Meet + First Flow */
     
-#firstflow .content {
-  color: #FFD2A6; /* same light melon as Movement */
- text-align: right;         /* ✅ text aligns right */
-  max-width: 600px;
-  margin-right: 64px;
 
-}
 #meet .content .h2,
 #meet .content .body,
-#firstflow .content .body {
-  color: #FFD2A6;
-  
-}
 
-    
-#firstflow .h2 {
-  line-height: 1.08;
-}
-
-#firstflow .body {
-  line-height: 1.6;
-}
-
-
-#firstflow .content .h2 {
-  color: #FFD2A6;
-  text-shadow: 0 3px 12px rgba(0,0,0,.45);
-   text-align: right;         /* keep text clean */
-  max-width: 520px; 
-    margin-right: 64px;/* prevents edge hugging */
-}
-
-  
-#firstflow .btnRow {
-  justify-content: flex-end;
-}
-    
-#firstflow .pageInner {
-  display: flex;
-  justify-content: flex-end;
-  background: rgba(0,0,0,.55);
-  color: #FFD2A6;
-}
 
     
 #guide .pageInner {
@@ -241,17 +202,16 @@
   background: #D65A3A;
 }
     
-#about
-#firstflow    
+#about,
 #schedule,
 #rates {
   background:
     radial-gradient(
       1200px 600px at 30% -20%,
-      rgba(255,255,255,0.25),
+      rgba(255,255,255,0.12),
       transparent 60%
     ),
-    var(--peach);
+    #000;
 }
 
     /* =========================
@@ -261,7 +221,7 @@
       --cream: #FBF6E6;
       --blue: #2F7FBF;
       --blueDeep: #1F5F97;
-      --peach: #F2A26B;
+      --peach: ##000000;
       --text: #171717;
       --muted: rgba(23,23,23,.72);
       --glass: rgba(255,255,255,.42);
@@ -289,7 +249,7 @@ margin: 0;
               }
     body{
       margin:0;
-      background: var(--cream);
+      background: #000;
       color: var(--text);
       font-family: "Cerebri", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
       letter-spacing: -0.01em;
@@ -933,7 +893,6 @@ margin: 0;
       
 <a href="#home" class="navBtn">Home</a>
 <a href="#about" class="navBtn">About us</a>
-<a href="#firstflow" class="navBtn">First Flow</a>
 <a href="#schedule" class="navBtn">Schedule</a>
 <a href="#rates" class="navBtn">Rates</a>
 
@@ -1014,44 +973,7 @@ margin: 0;
 </section>
 
 
-    <!-- PAGE 4 (First Flow starts here...) -->
-    <section class="page" id="firstflow" aria-label="First Flow page">
-
-      
-      <div class="pageInner">
-        <div class="bgImage" style="background-image:url('images/firstflow-bg.jpg');"></div>
-        
-
-        <div class="content reveal">
-          <h2 class="h2">
-            Your First Flow starts here.<br/>Unlimited Rides
-            for ₱1,500.
-          </h2>
-
-          <p class="body">
-            First Flow is where curiosity leads.
-            A quiet entry into rhythmic cycling, designed for trying something new at your own pace.
-            Come in, get familiar, and let the experience unfold naturally.
-            Stay for what feels good, and leave the rest behind.
-          </p>
-
-         <div class="btnRow">
- 
-<a
-  class="btnDM ig-link"
-  href="https://www.instagram.com/maroa.flow/"
->
-  DM TO BOOK
-</a>
-
-</div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PAGE 5 (Guide to first ride) -->
+    <!-- PAGE 4 (Guide to first ride) -->
     <section class="page page--withBg" id="guide" aria-label="Guide page">
 
   <div class="bgImage" style="background-image: url('images/guide-bg.jpg');"></div>
@@ -1075,7 +997,7 @@ margin: 0;
 
 </section>
 
-    <!-- PAGE 6 (Schedule: sunrise. sunset.) -->
+    <!-- PAGE 5 (Schedule: sunrise. sunset.) -->
     <section class="page" id="schedule" aria-label="Schedule page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/schedule-bg.jpg');"></div>
@@ -1135,7 +1057,7 @@ margin: 0;
       </div>
     </section>
 
-    <!-- PAGE 7 (Rates: Class packs) -->
+    <!-- PAGE 6 (Rates: Class packs) -->
     <section class="page" id="rates" aria-label="Rates page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/rates-bg.jpg');"></div>
@@ -1198,14 +1120,14 @@ margin: 0;
           </div>
 
          <div class="btnRow">
- 
-<a
-  class="btnDM ig-link"
-  href="https://www.instagram.com/maroa.flow/"
->
-  DM TO BOOK
-</a>
-
+  <a
+    class="btnDM"
+    href="https://forms.gle/AFC2SreBbk3Qj9tN8"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ORDER HERE
+  </a>
 </div>
 
         </div>
