@@ -612,14 +612,15 @@ margin: 0;
       background: rgba(255,255,255,.58);
     }
 
-    .btnDM{
-      background: var(--peach);
-      color: rgba(23,23,23,.88);
-      border: 1px solid rgba(0,0,0,.06);
-    }
+   .btnDM{
+  background: #E6A060;
+  color: #1F1F1F;
+  border: 1px solid rgba(0,0,0,.06);
+  font-weight: 700;
+}
     .btnDM:hover{
-      background: #E89255;
-    }
+  background: #D88A4A;
+}
 
     /* =========================
        7) LIST / GRID SECTIONS
@@ -661,11 +662,14 @@ margin: 0;
     }
 
     .panel{
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.42);
-      padding: 16px;
-    }
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(10px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.45);
+
+  padding: 16px;
+}
     .panelTitle{
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -680,12 +684,11 @@ margin: 0;
       font-weight: 600;
       font-size: 14px;
     }
-    .timePill{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.40);
-    }
+    
+  .timePill{
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(0,0,0,.08);
+}
 
     .ratesGrid{
       display:grid;
@@ -700,12 +703,14 @@ margin: 0;
       .ratesGrid{ grid-template-columns: 1fr; }
     }
 
-    .rateCard{
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.44);
-      padding: 16px;
-    }
+   .rateCard{
+  background: rgba(251,246,230,.90);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.45);
+  padding: 16px;
+}
+
     .rateName{
       font-weight: 900;
       letter-spacing: -0.02em;
@@ -787,30 +792,23 @@ margin: 0;
 
 /* --- MEET YOU HERE (FIX BLACK TEXT + LEFT ALIGN) --- */
 #meet .content {
-  text-align: left;
-  max-width: 520px;
-  margin-left: 64px;
-}
-
-#meet .h2 {
-  color: #1F5F97 !important;
-  text-shadow: none;
-}
-
-#meet .body {
-  color: #1f1f1f;
-  text-shadow: none;
-}
-
-    #meet .content {
-  text-align: left;
-  max-width: 520px;
+  max-width: 700px;
   margin-left: 64px;
 
   background: rgba(251,246,230,0.92);
-  padding: 40px;
   border-radius: 28px;
+
+  padding: 48px;
+  text-align: left;
 }
+
+#meet .h2,
+#meet .body {
+  color: #1F5F97;
+  text-shadow: none;
+}
+
+  
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
 #firstflow .pageInner {
@@ -1127,7 +1125,7 @@ margin: 0;
             All Class Packs are non-transferable and non-refundable.
           </div>
 
-         <div class="btnRow">
+        <div class="btnRow">
   <a
     class="btnDM"
     href="https://forms.gle/AFC2SreBbk3Qj9tN8"
