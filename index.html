@@ -221,7 +221,7 @@
       --cream: #FBF6E6;
       --blue: #2F7FBF;
       --blueDeep: #1F5F97;
-      --peach: ##000000;
+      --peach: #000000;
       --text: #171717;
       --muted: rgba(23,23,23,.72);
       --glass: rgba(255,255,255,.42);
@@ -393,24 +393,7 @@ margin: 0;
 
 }
 
-    
-/* --- ORANGE TEXTURE BACKGROUNDS (Schedule & Rates) --- */
-
-#schedule::before,
-#rates::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/images/peach-texture.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.30;
-  pointer-events: none;
-  z-index: 0;
-}
-
-    
+  
 /* Make image-based sections feel tall again */
 #about .pageInner,
 #firstflow .pageInner,
@@ -809,10 +792,24 @@ margin: 0;
   margin-left: 64px;
 }
 
-#meet .h2,
-#meet .body {
-  color: var(--blueDeep);
+#meet .h2 {
+  color: #1F5F97 !important;
   text-shadow: none;
+}
+
+#meet .body {
+  color: #1f1f1f;
+  text-shadow: none;
+}
+
+    #meet .content {
+  text-align: left;
+  max-width: 520px;
+  margin-left: 64px;
+
+  background: rgba(251,246,230,0.92);
+  padding: 40px;
+  border-radius: 28px;
 }
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
@@ -1065,9 +1062,13 @@ margin: 0;
     </section>
 
     <!-- PAGE 6 (Rates: Class packs) -->
-    <section class="page" id="rates" aria-label="Rates page">
-      <div class="pageInner">
-        <div class="bgImage" style="background-image:url('images/rates-bg.jpg');"></div>
+    <section
+  class="page"
+  id="rates"
+  aria-label="Rates page"
+  style="background-image:url('images/rates-bg.jpg'); background-size:cover; background-position:center;"
+>
+  <div class="pageInner">
         
 
         <div class="content reveal">
