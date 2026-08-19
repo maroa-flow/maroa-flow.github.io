@@ -789,10 +789,17 @@ margin: 0;
 /* --- ABOUT --- */
 
 
-#about .h2,
+#about .h2 {
+  color: var(--melon);
+  text-shadow:
+    0 4px 12px rgba(0,0,0,.85),
+    0 12px 30px rgba(0,0,0,.60);
+}
+
 #about .body {
   color: var(--melon);
-  text-shadow: var(--shadowOnPhoto);
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.75);
 }
 
 /* --- MEET YOU HERE (FIX BLACK TEXT + LEFT ALIGN) --- */
@@ -804,8 +811,8 @@ margin: 0;
 
 #meet .h2,
 #meet .body {
-  color: var(--melon);
-  text-shadow: var(--shadowOnPhoto);
+  color: var(--blueDeep);
+  text-shadow: none;
 }
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
@@ -921,7 +928,7 @@ margin: 0;
 </section>
 
 
-    <!-- PAGE 2 (Movement belongs...) -->
+    <!-- PAGE 2 (About Us/Intro) -->
     <section class="page" id="about" aria-label="About us page">
       <div class="pageInner">
         <div class="bgImage" style="background-image:url('images/home-2.jpg');"></div>
@@ -931,7 +938,7 @@ margin: 0;
           <h2 class="h2">
             <br></br>
             Movement belongs in everyday life.<br/>
-            It can feel immaculate, every time.
+            And it can feel immaculate every single time.
           </h2>
 
           <p class="body">
