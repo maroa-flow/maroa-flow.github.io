@@ -739,14 +739,19 @@ margin: 0;
  .fineprint{
   margin-top: 18px;
 
+  display: inline;
+
   font-size: 13px;
   font-weight: 700;
 
-  color: #FFD2A6;
+  color: #1F1F1F;
 
-  text-shadow:
-    0 0 10px rgba(255,210,166,.9),
-    0 0 18px rgba(255,210,166,.7);
+  background: linear-gradient(
+    transparent 55%,
+    rgba(255,210,166,0.75) 55%
+  );
+
+  padding: 0 2px;
 }
 
     /* =========================
@@ -1069,16 +1074,15 @@ margin: 0;
             </div>
           </div>
 
+          <div class="scheduleDisclaimer">
+Class schedules are subject to availability, weather conditions, and coach availability.<br>
+A 12-hour cancellation policy applies to all confirmed bookings.
+</div>
         
         </div>
       </div>
 
-      <div class="scheduleDisclaimer">
-        <br/>
-  Class schedules may vary based on weather conditions and coach availability.
-A 12-hour cancellation policy applies to all confirmed bookings.
-        
-</div>
+  
  
     </section>
 
