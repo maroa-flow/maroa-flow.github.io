@@ -686,16 +686,21 @@ margin: 0;
     }
     
   .timePill{
-  background: rgba(255,255,255,.88);
-  border: 1px solid rgba(0,0,0,.08);
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  color: #2A2A2A;
+  font-weight: 700;
 }
 
     .ratesGrid{
-      display:grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 12px;
-      margin: 18px auto 0;
-    }
+  display: grid;
+  grid-template-columns: repeat(5, 220px);
+  justify-content: center;
+  gap: 12px;
+  margin: 18px auto 0;
+}
     @media(max-width:980px){
       .ratesGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -732,11 +737,15 @@ margin: 0;
     }
 
     .fineprint{
-      margin-top: 14px;
-      font-size: 12.5px;
-      color: rgba(23,23,23,.68);
-      max-width: 84ch;
-    }
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 14px;
+  background: rgba(255,210,166,0.90);
+  border-radius: 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1F1F1F;
+}
 
     /* =========================
        8) MINIMAL SCROLL ANIMATION
@@ -790,12 +799,12 @@ margin: 0;
     0 2px 8px rgba(0,0,0,.75);
 }
 
-/* --- MEET YOU HERE (FIX BLACK TEXT + LEFT ALIGN) --- */
+/* --- MEET YOU HERE --- */
 #meet .content {
   max-width: 700px;
   margin-left: 64px;
 
-  background: rgba(251,246,230,0.92);
+  background: var(--melon);
   border-radius: 28px;
   padding: 48px;
 
@@ -1026,6 +1035,10 @@ margin: 0;
                 <span class="timePill">8:00 am</span>
               </div>
             <div class="btnRow">
+              
+              <div class="scheduleDisclaimer">
+  Class schedules may vary based on weather conditions and coach availability.
+</div>
  
 <a
   class="btnDM ig-link"
