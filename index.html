@@ -797,18 +797,22 @@ margin: 0;
 
   background: rgba(251,246,230,0.92);
   border-radius: 28px;
-
   padding: 48px;
+
   text-align: left;
 }
 
-#meet .h2,
-#meet .body {
-  color: #1F5F97;
-  text-shadow: none;
-}
+/* Force blue text */
+#meet .content h2,
+#meet .content p,
+#meet .content strong {
+  color: #1F5F97 !important;
+  text-shadow: none !important;
 
-  
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
 #firstflow .pageInner {
@@ -1073,15 +1077,6 @@ margin: 0;
           <h2 class="h2">Class Packs</h2>
 
           <div class="ratesGrid">
-
-            <div class="rateCard">
-              <p class="rateName">First Flow</p>
-              <p class="ratePrice">₱1,500</p>
-              <p class="rateMeta">
-                Unlimited rides for 5 days straight<br/>
-                Non-shareable
-              </p>
-            </div>
 
             <div class="rateCard">
               <p class="rateName">1 class</p>
