@@ -187,6 +187,9 @@
   justify-content: center;
 }
 
+    #schedule .bgImage {
+  filter: brightness(0.45);
+}
 
 #rates .rateCard {
   text-align: center;
@@ -201,6 +204,23 @@
 #rates .btnDM:hover {
   background: #D65A3A;
 }
+
+    #rates {
+  position: relative;
+}
+    
+    #rates::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background: rgba(0,0,0,.38);
+
+  z-index:1;
+  pointer-events:none;
+}
+
     
 #about,
 #schedule,
@@ -737,46 +757,29 @@ margin: 0;
     }
 
  .fineprint{
-  margin-top: 42px;
-
-  display: inline-block;
+  margin-top: 22px;
 
   font-size: 13px;
   font-weight: 400;
 
   line-height: 1.6;
-  color: #1F1F1F;
 
-  background: rgba(255,210,166,0.75);
-
-  padding: 2px 8px;
-
-  border-radius: 4px;
+  color: #FBF6E6;
 }
 
-
-    .scheduleDisclaimer{
+.scheduleDisclaimer{
   margin-top: 24px;
 
-  display: inline;
-
   font-size: 13px;
   font-weight: 400;
 
-  color: #1F1F1F;
   line-height: 1.6;
 
-  background: linear-gradient(
-    transparent 55%,
-    rgba(255,210,166,0.75) 55%
-  );
+  color: #FFD2A6;
 
-  padding: 0 4px;
-
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  text-align: center;
 }
-
+  
     /* =========================
        8) MINIMAL SCROLL ANIMATION
        ========================= */
@@ -841,15 +844,6 @@ margin: 0;
   text-align: left;
 }
 
-#meet .content {
-  max-width: 700px;
-  margin-left: 64px;
-
-  background: var(--melon);
-  border-radius: 28px;
-
-  padding: 48px;
-  text-align: left;
 }
 #meet .content h2,
 #meet .content p,
@@ -862,14 +856,30 @@ margin: 0;
   box-shadow: none !important;
 }
 
-/* Reduce space between heading and address */
 #meet .h2 {
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
 #meet .body {
   margin-top: 0;
 }
+
+  @media (max-width: 768px) {
+
+  #meet .pageInner {
+    justify-content: center;
+  }
+
+  #meet .content {
+    margin-left: 0;
+    margin-right: 0;
+
+    width: min(92vw, 520px);
+
+    padding: 28px;
+  }
+
+}  
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
 #firstflow .pageInner {
@@ -920,11 +930,11 @@ margin: 0;
   overflow: visible;
 }
 
-    
-#rates .content {
+ #rates .content {
   max-width: none;
-}
-    
+  position: relative;
+  z-index: 2;
+}   
 
 /* ensure content stays above texture */
     #about .pageInner,
