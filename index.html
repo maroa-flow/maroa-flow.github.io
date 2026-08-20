@@ -739,31 +739,42 @@ margin: 0;
  .fineprint{
   margin-top: 42px;
 
+  display: inline-block;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.6;
+  color: #1F1F1F;
+
+  background: rgba(255,210,166,0.75);
+
+  padding: 2px 8px;
+
+  border-radius: 4px;
+}
+
+
+    .scheduleDisclaimer{
+  margin-top: 24px;
+
   display: inline;
 
   font-size: 13px;
-  font-weight: 700;
-   line-height: 1.5;
+  font-weight: 400;
 
   color: #1F1F1F;
+  line-height: 1.6;
 
   background: linear-gradient(
-    transparent 60%,
-    rgba(255,210,166,0.65) 60%
+    transparent 55%,
+    rgba(255,210,166,0.75) 55%
   );
 
-  padding: 0 3px;
-}
+  padding: 0 4px;
 
-    .scheduleDisclaimer{
-  margin-top: 14px;
-  font-size: 12.5px;
-  color: rgba(255,210,166,.85);
-  max-width: 84ch;
-  line-height: 1.5;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
     /* =========================
@@ -823,14 +834,23 @@ margin: 0;
   max-width: 700px;
   margin-left: 64px;
 
-  background: var(--melon);
+  background: #F6DEBF;
   border-radius: 28px;
-  padding: 48px;
+  padding: 40px 48px;
 
   text-align: left;
 }
 
-/* Force blue text */
+#meet .content {
+  max-width: 700px;
+  margin-left: 64px;
+
+  background: var(--melon);
+  border-radius: 28px;
+
+  padding: 48px;
+  text-align: left;
+}
 #meet .content h2,
 #meet .content p,
 #meet .content strong {
@@ -840,6 +860,15 @@ margin: 0;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Reduce space between heading and address */
+#meet .h2 {
+  margin-bottom: 16px;
+}
+
+#meet .body {
+  margin-top: 0;
 }
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
