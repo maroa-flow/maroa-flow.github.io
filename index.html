@@ -234,6 +234,11 @@
     #000;
 }
 
+    #rates .h2 {
+  color: #FFE0BC;
+}
+
+
     /* =========================
        2) BASE / BRAND TOKENS
        ========================= */
@@ -403,12 +408,15 @@ margin: 0;
 /* Mobile refinement */
 
 @media (max-width: 768px) {
-  .navInner {
-    padding: 10px 16px;
+
+  #meet .pageInner {
+    justify-content: center;
   }
 
-  .navLogo {
-    height: 44px;
+  #meet .content {
+    width: 92%;
+    margin: 0 auto;
+    padding: 24px;
   }
 
 }
@@ -833,53 +841,45 @@ margin: 0;
 }
 
 /* --- MEET YOU HERE --- */
+
 #meet .content {
-  max-width: 700px;
+  width: min(700px, 100%);
   margin-left: 64px;
 
   background: #F6DEBF;
   border-radius: 28px;
+
   padding: 40px 48px;
 
   text-align: left;
 }
 
-}
+/* Force ALL text blue */
+#meet .content,
 #meet .content h2,
 #meet .content p,
 #meet .content strong {
   color: #1F5F97 !important;
-  text-shadow: none !important;
-
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  text-shadow: none !important;
 }
 
+/* Minimal spacing */
 #meet .h2 {
-  margin-bottom: 4px;
+  margin-bottom: 0 !important;
 }
 
 #meet .body {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
-  @media (max-width: 768px) {
+/* Remove any accidental boxes inside */
+#meet .content * {
+  background: transparent;
+}
 
-  #meet .pageInner {
-    justify-content: center;
-  }
-
-  #meet .content {
-    margin-left: 0;
-    margin-right: 0;
-
-    width: min(92vw, 520px);
-
-    padding: 28px;
-  }
-
-}  
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
 #firstflow .pageInner {
