@@ -123,30 +123,20 @@
   justify-content: flex-start;
 }
 
-/* Lower the text block (works reliably) */
-
-
-/* Apply Movement styling to Meet + First Flow */
-    
-
-#meet .content .h2,
-#meet .content .body,
-
-
     
 #guide .pageInner {
-  background: #FBF6E6;      /* sand / cream */
-  color: #1A1A1A;            /* readable dark */
+  background: #FBF6E6;      
+  color: #1A1A1A;            
   min-height: auto;
   padding: 48px 56px;
-  height: auto; /* critical */
+  height: auto; 
 }
 
     
 #guide {
   height: auto;
   min-height: auto;
-  padding-bottom: 64px; /* tighter ending */
+  padding-bottom: 64px; 
 }
 
 
@@ -841,44 +831,30 @@ margin: 0;
 }
 
 /* --- MEET YOU HERE --- */
-
 #meet .content {
-  width: min(700px, 100%);
+  max-width: 650px;
   margin-left: 64px;
-
-  background: #F6DEBF;
-  border-radius: 28px;
-
-  padding: 40px 48px;
-
+  padding: 0;
   text-align: left;
 }
 
-/* Force ALL text blue */
-#meet .content,
-#meet .content h2,
-#meet .content p,
-#meet .content strong {
-  color: #1F5F97 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-/* Minimal spacing */
+/* Heading */
 #meet .h2 {
-  margin-bottom: 0 !important;
+  color: #FFE0BC;
+  text-shadow: 0 3px 12px rgba(0,0,0,.55);
+
+  margin-bottom: 6px;
 }
 
-#meet .body {
-  margin-top: 0 !important;
+/* Body */
+#meet .body,
+#meet .body strong {
+  color: #FFE0BC;
+  text-shadow: 0 2px 8px rgba(0,0,0,.55);
+
+  margin-top: 0;
 }
 
-/* Remove any accidental boxes inside */
-#meet .content * {
-  background: transparent;
-}
 
 
 /* --- FIRST FLOW (FIX CRAMPING + ALIGNMENT) --- */
@@ -1080,17 +1056,17 @@ margin: 0;
           <h2 class="h2">Sunrise. Sunset.</h2>
 
           <p class="body">
-            The schedule:<br/>
-           45 minutes per class, 7 days a week.
+            Sunrise: 5:30am<br/>
+           Sunset: 5:15pm.
           </p>
 
           <div class="scheduleGrid">
             <div class="panel">
-              <div class="panelTitle">Morning Classes</div>
+              <div class="panelTitle">Morning Timeslots</div>
               <div class="times">
-                <span class="timePill">5:30 am</span>
-                <span class="timePill">6:45 am</span>
-                <span class="timePill">8:00 am</span>
+                <span class="timePill">5:30am</span>
+                <span class="timePill">6:45am</span>
+                <span class="timePill">8:00am</span>
               </div>
             <div class="btnRow">
               
@@ -1106,10 +1082,10 @@ margin: 0;
             </div>
 
             <div class="panel">
-              <div class="panelTitle">Afternoon Classes</div>
+              <div class="panelTitle">Afternoon Timeslots</div>
               <div class="times">
-                <span class="timePill">4:00 pm</span>
-                <span class="timePill">5:15 pm</span>
+                <span class="timePill">4:00pm</span>
+                <span class="timePill">5:15pm</span>
               </div>
               <div class="btnRow">
   
@@ -1126,7 +1102,7 @@ margin: 0;
           </div>
 
           <div class="scheduleDisclaimer">
-Class schedules are subject to availability, weather conditions, and coach availability.<br>
+Class schedules are subject to weather conditions, and coach availability.<br>
 A 12-hour cancellation policy applies to all confirmed bookings.
 </div>
         
